@@ -6,4 +6,4 @@ ENV_DIR=$3
 
 cd $BUILD_DIR
 
-yarn build-storybook
+npm build-storybook -o public/storybook
