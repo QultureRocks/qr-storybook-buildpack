@@ -8,4 +8,4 @@ echo '==================== BUILDING STORYBOOK ===================='
 
 cd $BUILD_DIR
 
-npm run build-storybook --quiet
+npm run build-storybook -- -o public/stroybook --quiet
