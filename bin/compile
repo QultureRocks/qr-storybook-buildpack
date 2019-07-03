@@ -5,10 +5,8 @@ CACHE_DIR=$2
 ENV_DIR=$3
 
 echo '==================== BUILDING STORYBOOK ===================='
-printenv
-BRANCH_NAME=$(cat $ENV_DIR/NODE_OPTIONS)
-echo $BRANCH_NAME
 
 cd $BUILD_DIR
 
+export NODE_OPTIONS=$(cat $ENV_DIR/NODE_OPTIONS)
 npm run build-storybook -- -o public/storybook --quiet
